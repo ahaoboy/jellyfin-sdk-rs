@@ -1,0 +1,17 @@
+{
+  "name": "jellyfin-sdk-rs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build":"openapi-generator-cli generate -i ./openapi.json -g rust -o ./  &&  npm run fmt",
+    "fmt": "cargo fmt --all && cargo clippy --fix --allow-dirty --allow-staged",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.13.4"
+  }
+}
